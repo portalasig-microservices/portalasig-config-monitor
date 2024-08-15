@@ -23,25 +23,25 @@ datasources:
     isDefault: false
     version: 1
     editable: false
-  - name: Tempo
-    type: tempo
-    access: proxy
-    orgId: 1
-    url: http://tempo:3200
-    basicAuth: false
-    isDefault: true
-    version: 1
-    editable: false
-    apiVersion: 1
-    uid: tempo
-    jsonData:
-      httpMethod: GET
-      serviceMap:
-        datasourceUid: prometheus
-      tracesToLogsV2:
-        datasourceUid: loki
-        spanStartTimeShift: '-1h'
-        spanEndTimeShift: '1h'
-        filterByTraceID: true
-        filterBySpanID: true
-        tags: [ { key: 'service.name', value: 'job' } ]
+#  - name: Tempo
+#    type: tempo
+#    access: proxy
+#    orgId: 1
+#    url: http://tempo:3200
+#    basicAuth: false
+#    isDefault: true
+#    version: 1
+#    editable: false
+#    apiVersion: 1
+#    uid: tempo
+#    jsonData:
+#      httpMethod: GET
+#      serviceMap:
+#        datasourceUid: prometheus
+#      tracesToLogsV2:
+#        datasourceUid: loki
+#        spanStartTimeShift: '-1h'
+#        spanEndTimeShift: '1h'
+#        filterByTraceID: true
+#        filterBySpanID: true
+#        tags: [ { key: 'service.name', value: 'job' } ]
